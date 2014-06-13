@@ -1,0 +1,11 @@
+<%= form_for @job do |f| %>
+  <%= f.label :title %>:
+  <%= f.text_field :title, required: true %><br>
+
+  <%= f.label :description %>:
+  <%= f.text_area :description %><br>
+
+  <!-- first argument attribute second colleciton  third argument is the value of the colleciton fourth is what you want to view-->
+  <%= f.colleciton_select(:company_id, @companies, :id, :name) %>
+  <%= f.submit %>
+<% end %>
